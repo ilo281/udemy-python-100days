@@ -3,6 +3,7 @@ name1 = input("What is your name ? \n")
 name2 = input("What is their name ? \n")
 
 combined_names = name1 + name2
+
 lower_case_names = combined_names.lower()
 letter_count = 0
 word_true = "true"
