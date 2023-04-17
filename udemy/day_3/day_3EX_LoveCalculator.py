@@ -16,6 +16,8 @@ for letter in word_love:
     love_counter = letter_count + lower_case_names.count(letter)
 digits_counter = f"{true_counter}{love_counter}"
 print(digits_counter)
+digits_counter = (true_counter)+(love_counter)
+print(digits_counter)
 
 # lower_case.count("u")
 # lower_case.count("e")
