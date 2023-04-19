@@ -6,18 +6,28 @@ combined_names = name1 + name2
 
 lower_case_names = combined_names.lower()
 letter_count = 0
+all_true_letters_counter = 0
 word_true = "true"
 for letter in word_true:
     true_counter = letter_count + lower_case_names.count(letter)
+    all_true_letters_counter = all_true_letters_counter + true_counter
 
 word_love = "love"
+all_love_letters_counter = 0
 letter_count = 0
 for letter in word_love:
     love_counter = letter_count + lower_case_names.count(letter)
-digits_counter = f"{true_counter}{love_counter}"
-print(digits_counter)
-digits_counter = (true_counter)+(love_counter)
-print(digits_counter)
+    all_love_letters_counter = all_love_letters_counter + love_counter
+digits_counter = int(f"{all_true_letters_counter}{all_love_letters_counter}")
+
+
+if (digits_counter < 10) or (digits_counter > 90):
+    print(f"your score is {digits_counter} , you go together like coke and mentos ")
+elif (digits_counter >= 40) and (digits_counter <= 50):
+    print(f"your score is {digits_counter},you are alright together")
+else:
+    print(f"your score is {digits_counter}")
+
 
 # lower_case.count("u")
 # lower_case.count("e")
