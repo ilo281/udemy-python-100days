@@ -16,7 +16,6 @@ def is_triplet(a, b, c):
     sum_small_integers = first_var_square + second_var_square
     # 4 determine the square of largest integer
     largest_var_square = sorted_list[2] ** 2
-
     # 5 compare # 3 and # 4 then return True if they are the same .
     if sum_small_integers == largest_var_square:
         compare = True
