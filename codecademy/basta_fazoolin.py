@@ -28,6 +28,13 @@ class Menu:
         self.start_time = start_time
         self.end_time = end_time
 
+    def calculate_bill(self, purchased_items):
+        total_price = 0
+        for item in purchased_items:
+            total_price = total_price + item
+        return total_price
+
+
 
 if __name__ == "__main__":
     brunch_items = {'pancakes': 7.50, 'waffles': 9.00, 'burger': 11.00, 'home fries': 4.50, 'coffee': 1.50,
@@ -35,4 +42,5 @@ if __name__ == "__main__":
     menu_object = Menu("Brunch", brunch_items, "11am", "4pm")
     print(menu_object.items)
     print(menu_object.name)
+    print(menu_object.calculate_bill([brunch_items["pancakes"], brunch_items["home fries"], brunch_items["coffee"]]))
 
