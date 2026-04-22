@@ -18,14 +18,28 @@ import calendar
 class BasicCalendar:
     def __init__(self, welcome_message):
         self.welcome_message = welcome_message
+        self.event = ""
 
     def view_calendar(self, year, month):
         text = calendar.TextCalendar()
 
         return text.formatmonth(year, month)
 
+    def update_calendar(self, add_event):
+        self.event = add_event
+
+    def display_calendar(self):
+        return self.event
+
+    def delete_event(self,):
+        self.event = ""
+
 
 if __name__ == "__main__":
     basic_calendar_object = BasicCalendar("Welcome to my Calendar")
     print(basic_calendar_object.welcome_message)
     print(basic_calendar_object.view_calendar(2025, 10))
+    basic_calendar_object.update_calendar("December 31")
+    print(basic_calendar_object.display_calendar())
+    basic_calendar_object.delete_event()
+    print(basic_calendar_object.display_calendar())
